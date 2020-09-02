@@ -7,6 +7,11 @@ class Api::ParamsExamplesController < ApplicationController
     render "query_params.json.jb"
   end
 
+  def segment_params_action
+    @output_message = "Hello the product id is #{params["product_id"]}"
+    render "segment_params.json.jb"
+  end
+
   def name_action
     input_name = params["my_name"]
     @output_message = input_name.upcase
