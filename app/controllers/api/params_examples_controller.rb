@@ -6,4 +6,13 @@ class Api::ParamsExamplesController < ApplicationController
     @age = params["age"]
     render "query_params.json.jb"
   end
+
+  def name_action
+    input_name = params["my_name"]
+    @output_message = input_name.upcase
+    if @output_message.starts_with?("A")
+      @output_message += " (hey your name starts with A)"
+    end
+    render "name.json.jb"
+  end
 end
