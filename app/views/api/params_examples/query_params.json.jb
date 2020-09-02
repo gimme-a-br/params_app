@@ -1,0 +1,4 @@
+{
+  message: @output_message,
+  message2: @age,
+}
