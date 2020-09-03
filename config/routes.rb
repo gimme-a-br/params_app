@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     get "/name_path" => "params_examples#name_action"
     get "/query_guess_path" => "params_examples#query_guess_action"
     get "/segment_guess_path/:my_guess" => "params_examples#query_guess_action"
+    post "/body_guess_path" => "params_examples#query_guess_action"
+    post "/login" => "params_examples#login_action"
   end
 end

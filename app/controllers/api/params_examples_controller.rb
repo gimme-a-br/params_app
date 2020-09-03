@@ -39,4 +39,13 @@ class Api::ParamsExamplesController < ApplicationController
     end
     render "query_guess.json.jb"
   end
+
+  def login_action
+    if params["username"] == "hugh" && params["password"] == "swordfish"
+      @output_message = "Valid"
+    else
+      @output_message = "Invalid"
+    end
+    render "login.json.jb"
+  end
 end
